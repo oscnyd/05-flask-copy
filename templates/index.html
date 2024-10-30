@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask application</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="login_form">
+        <!-- Login form -->
+        <form action="{{url_for('login')}}" method="POST">
+            <h3>Login</h3><br>
+            <!-- Username input field -->
+            User: <input type="text" name="user"><br>
+            <!-- Password input field -->
+            Pwd: <input type="text" name="pwd"><br>
+        </div>
+        <!-- Submit button -->
+        <input type="submit" value="Login" id="knapp_submit"><br><br><br>
+        </form>
+    </div>
+    
+    <div class="login_form">
+        <!-- Links for new user registration and displaying all users -->
+        <a href="/enternew">New user</a><br><br><br>
+        <a href="/list">Display All users</a>
+    </div>
+</body>
+</html>

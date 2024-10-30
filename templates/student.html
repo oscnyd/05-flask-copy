@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures compatibility with IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for mobile devices -->
+    <title>New Student</title> <!-- Title of the page -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="login_form">
+        <!-- Form to add a new user -->
+        <form action="{{url_for('addrec')}}" method="POST">
+            <h3>New user</h3> <!-- Form heading -->
+            <!-- Input field for username -->
+            User: <input type="text" name="user" id="user"><br>
+            <!-- Input field for password -->
+            Pwd: <input type="text" name="pwd" id="pwd"><br>
+            <!-- Submit button -->
+            <input type="submit" value="submit"><br>
+        </form>
+    </div>
+</body>
+</html>

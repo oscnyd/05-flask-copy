@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <!-- Table to display user records -->
+    <table border="1">
+        <thead>
+            <td>User</td>
+            <td>Pwd</td>
+        </thead>
+
+        <!-- Loop through each row in rows and display user and password -->
+        {% for row in rows %}
+        <tr>
+            <td>{{row['user']}}</td>
+            <td>{{row['pwd']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <!-- Link to go back to the homepage -->
+    <a href="/">Go to homepage</a>
+</body>
+</html>

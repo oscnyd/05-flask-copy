@@ -1,0 +1,26 @@
+/* Set the base font size and background color for the body */
+body {
+    font-size: 20px;
+    background-color: aqua;
+}
+
+/* Style for h3 elements */
+h3 {
+    font-size: 60px;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+/* Style for elements with the class 'login_form' */
+.login_form {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto; 
+}
+
+/* Style for the element with the ID 'knapp_submit' */
+#knapp_submit {
+    display: block;
+    margin: 0 auto;
+}
