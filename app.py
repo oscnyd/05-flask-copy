@@ -22,8 +22,8 @@ def login():
                 cur = con.cursor()
                 try:
                     # Query to check if the user exists
-                    sqlite_insert_query = """SELECT * FROM LoginInformasjon WHERE user = '""" + user + """' AND pwd = '""" + pwd + """'"""
-                    cur.execute(sqlite_insert_query)
+                    sqlite_select_query = """SELECT * FROM LoginInformasjon WHERE user = '""" + user + """' AND pwd = '""" + pwd + """'"""
+                    cur.execute(sqlite_select_query)
                     records = cur.fetchall()
                     if len(records) >= 1:
                         msg = "Login successful"
@@ -80,4 +80,4 @@ def list():
     return render_template('list.html',rows=rows)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0')
